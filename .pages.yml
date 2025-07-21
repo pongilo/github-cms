@@ -8,7 +8,7 @@ content:
     path: src/_posts
     type: collection
     fields:
-      [ title, published, author ]
+      - { name: title, label: Title, type: string }
   - name: authors
     label: Authors
     path: src/_data/authors.json
