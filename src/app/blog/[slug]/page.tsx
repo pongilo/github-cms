@@ -2,14 +2,15 @@ import { getPostBySlug, getAllPosts } from '@/lib/posts';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-interface BlogPostPageProps {
-  params: {
+interface PageProps {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getPostBySlug(await params.slug);
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
