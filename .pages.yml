@@ -14,11 +14,12 @@ content:
       - name: date
         label: Date
         type: date
-      - name: tag
-        label: Tag
+      - name: Network
+        label: Network
         type: select
         options:
-          values: [ Tech, News, Sports ]
+          multiple: true
+          values: [ Telos, Vaulta, Wax, XPR, FIO ]
       - name: title
         label: Title
         type: string
