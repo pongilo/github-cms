@@ -1,5 +1,6 @@
 ---
 published: true
+date: 2025-06-22
 title: "Detroit Ledger Tech WAX Guild Updates End of Aug — Sept 2023: WAX
   Community Update"
 ---
